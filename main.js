@@ -55,3 +55,31 @@ const cliente4 = {
 //     Text: `Hola cliente 1`
 //     Date:   
 // }
+
+
+/*
+Escribe un programa que almacene los objetos creados en el ejercio anterior del proyecto dentro de un array (un array por cada modelo de datos). A continuación, recorre cada uno de los arrays y muestra todas propiedades..
+*/
+
+const gestores = [gestor, gestor2]
+const clientes = [cliente1, cliente2, cliente3, cliente4]
+
+console.log(gestores);
+console.log(clientes);
+
+for (const datosGestores of gestores) {
+    console.log(`id: ${datosGestores.id}`);
+    console.log(`usuario ${datosGestores.usuario}`);
+    console.log(`clave ${datosGestores.clave}`);
+    console.log(`correo ${datosGestores.correo}`);
+    console.log(`--------`);
+}
+
+for (const datosClientes of clientes) {
+    console.log(`id: ${datosClientes.id}`);
+    console.log(`usuario ${datosClientes.usuario}`);
+    console.log(`clave ${datosClientes.clave}`);
+    console.log(`correo ${datosClientes.correo}`);
+    console.log(`saldo ${datosClientes.saldo}`);
+    console.log(`--------`);
+}
