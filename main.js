@@ -1,3 +1,5 @@
+function generarGestores() {
+    
 const gestor = {
     id: 1,
     usuario: `gestor1`,
@@ -11,7 +13,11 @@ const gestor2 = {
     clave: `gestor2`,
     correo: `gestor2@gmail.com`
 };
-
+const gestores = [gestor, gestor2]
+return(gestores);
+}
+function generarClientes() {
+    
 const cliente1 = {
     id: 1,
     idGestor: 1,
@@ -47,6 +53,9 @@ const cliente4 = {
     correo: `cliente4@gmail.com`,
     saldo: 780
 };
+const clientes = [cliente1, cliente2, cliente3, cliente4]
+return(clientes)
+}
 
 // const mensaje1 = {
 //     id: 1,
@@ -56,18 +65,10 @@ const cliente4 = {
 //     Date:   
 // }
 
+// console.log(gestores);
+// console.log(clientes);
 
-/*
-Escribe un programa que almacene los objetos creados en el ejercio anterior del proyecto dentro de un array (un array por cada modelo de datos). A continuación, recorre cada uno de los arrays y muestra todas propiedades..
-*/
-
-const gestores = [gestor, gestor2]
-const clientes = [cliente1, cliente2, cliente3, cliente4]
-
-console.log(gestores);
-console.log(clientes);
-
-for (const datosGestores of gestores) {
+function mostrarGestor(gestor) {
     console.log(`id: ${datosGestores.id}`);
     console.log(`usuario ${datosGestores.usuario}`);
     console.log(`clave ${datosGestores.clave}`);
@@ -75,6 +76,28 @@ for (const datosGestores of gestores) {
     console.log(`--------`);
 }
 
+function mostrarGestores(gestores) {
+    
+for (const datosGestores of gestores) {
+    mostrarGestor(gestor);
+}
+}
+
+function mostrarClientes(cliente) {
+    console.log(`id: ${datosClientes.id}`);
+    console.log(`usuario ${datosClientes.usuario}`);
+    console.log(`clave ${datosClientes.clave}`);
+    console.log(`correo ${datosClientes.correo}`);
+    console.log(`saldo ${datosClientes.saldo}`);
+    console.log(`--------`);
+    }
+
+
+function mostrarClientes(clientes) {
+    for (const cliente of clientes) {
+        mostrarClientes(cliente);
+    }
+ }   
 for (const datosClientes of clientes) {
     console.log(`id: ${datosClientes.id}`);
     console.log(`usuario ${datosClientes.usuario}`);
@@ -88,5 +111,8 @@ const gestoresJSON = JSON.stringify(gestores);
 console.log(gestoresJSON);
 console.log(gestoresJSON.length);
 
+const clientes = generarClientes();
+const cliente1 = clientes[0];
 const cliente1JSON = JSON.stringify(cliente1);
 console.log(cliente1JSON);
+
